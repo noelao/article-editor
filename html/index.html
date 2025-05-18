@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: pilihan;
+            src: url(Magazine.ttf);
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            width: 100%;
+            height: 100vh;
+
+            font-family: pilihan;
+        }
+        .wrapper {
+            width: 520px;
+            height: max-content;
+
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            .pilihan {
+
+                height: 52px;
+                border: solid rgba(43, 43, 43, 0.38) 1px;
+                border-radius: 8px;
+
+                display: flex;
+
+                transition: background-color .3s ease;
+                transition-delay: var(--delayIni);
+                @starting-style {
+                    background-color: rgba(94, 94, 94, 0.47);   
+                }
+                .content {
+                    flex: 7;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    padding: 4px 8px;
+                    h2 {
+                        font-weight: lighter;
+                    }
+                }
+                .opsi {
+                    padding: 4px 8px;
+                    flex: 1;
+                    border-left: solid 1px rgba(43, 43, 43, 0.38);
+                    border-radius: 8px;
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    .tombol {
+                        border-radius: 6px;
+                        cursor: pointer;
+                        height: 28px;
+                        aspect-ratio: 1;
+                        border: solid 1px rgba(43, 43, 43, 0.38);
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        .tambahkanLagi {
+            padding: 4px 32px;
+            margin-top: 4px;
+            border: solid black 1px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .inputan {
+            height: 52px;
+            border: solid rgba(43, 43, 43, 0.38) 1px;
+            border-radius: 8px;
+            width: 100%;
+
+            position: fixed;
+            bottom: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                height: 100%;
+                font-size: 1rem;
+                font-family: pilihan;
+                padding: 0 12px;
+                width: 420px;
+            }
+            button {
+                height: 100%;
+                padding: 0 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="pilihan">
+                <div class="content">
+                    <h2>kemana</h2>
+                </div>
+                <div class="opsi">
+                    <div class="tombol" title="Edit">
+                        <p>E</p>
+                    </div>
+                    <div class="tombol" title="Delete">
+                        <p>D</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tambahkanLagi" onclick="tambahkanContent()">
+            <h1>add</h1>
+        </div>
+    </div>
+    <div class="inputan">
+        <input type="text" name="" id="">
+        <button onclick="tulisUlang()">Confirm</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
